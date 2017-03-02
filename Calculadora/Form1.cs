@@ -109,9 +109,10 @@ namespace Calculadora
 
         private void btnPorcentagem_Click(object sender, EventArgs e)
         {
-            op = "%";
             val1 = Convert.ToDouble(txtDisplay.Text);
-            txtDisplay.Clear();
+            Double percent = val1 / 100;
+            txtDisplay.Text = percent.ToString();
+            
         }
 
         private void btnRaiz_Click(object sender, EventArgs e)
@@ -150,8 +151,12 @@ namespace Calculadora
                     resultado = val1 / val2;
                     txtDisplay.Text = resultado.ToString();
                     break;
+                case "X^Y":
+                    val2 = Convert.ToDouble(txtDisplay.Text);
+                    Double resulPotencia = Math.Pow(val1, val2);
+                    txtDisplay.Text = resulPotencia.ToString();
+                    break;
 
-      
                 default:
                     break;
 
@@ -164,6 +169,21 @@ namespace Calculadora
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             txtDisplay.Clear();
+        }
+
+        private void txtDisplay_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExponencial_Click(object sender, EventArgs e)
+        {
+            op = "X^Y";
+            val1 = Convert.ToDouble(txtDisplay.Text);
+            txtDisplay.Clear();
+            
+
+
         }
     }
 }
