@@ -16,6 +16,7 @@ namespace Calculadora
         double val2;
         string op;
         double resultado;
+        double percent;
 
         public Form1()
         {
@@ -109,9 +110,19 @@ namespace Calculadora
 
         private void btnPorcentagem_Click(object sender, EventArgs e)
         {
-            val1 = Convert.ToDouble(txtDisplay.Text);
-            Double percent = val1 / 100;
-            txtDisplay.Text = percent.ToString();
+            if (val1 == 0)
+            {
+                val1 = Convert.ToDouble(txtDisplay.Text);
+                Double percent = val1 / 100;
+                txtDisplay.Text = percent.ToString();
+            }
+            else
+            {
+                val2 = Convert.ToDouble(txtDisplay.Text);
+                percent = val2 / 100;
+                resultado = val1 * percent;
+                txtDisplay.Text = resultado.ToString();
+            }
             
         }
 
@@ -184,6 +195,15 @@ namespace Calculadora
             
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            val1 = 0;
+            val2 = 0;
+            resultado = 0;
+            txtDisplay.Clear();
+           
         }
     }
 }

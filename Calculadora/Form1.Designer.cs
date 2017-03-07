@@ -50,17 +50,16 @@
             this.btnMultiplicacao = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnExponencial = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtDisplay
             // 
-            this.txtDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDisplay.Location = new System.Drawing.Point(29, 23);
-            this.txtDisplay.Multiline = true;
             this.txtDisplay.Name = "txtDisplay";
-            this.txtDisplay.Size = new System.Drawing.Size(280, 51);
+            this.txtDisplay.Size = new System.Drawing.Size(280, 44);
             this.txtDisplay.TabIndex = 0;
-            this.txtDisplay.Text = "\r\n";
             this.txtDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtDisplay.TextChanged += new System.EventHandler(this.txtDisplay_TextChanged);
             // 
@@ -315,12 +314,25 @@
             this.btnExponencial.UseVisualStyleBackColor = false;
             this.btnExponencial.Click += new System.EventHandler(this.btnExponencial_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(103, 81);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 43);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Ce";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(333, 388);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnExponencial);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnMultiplicacao);
@@ -374,6 +386,7 @@
         private System.Windows.Forms.Button btnMultiplicacao;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnExponencial;
+        private System.Windows.Forms.Button button1;
     }
 }
 
